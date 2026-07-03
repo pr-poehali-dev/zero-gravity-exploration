@@ -43,13 +43,13 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#about" className="hover:text-foreground transition-colors">
-                  О компании
+                <a href="#services" className="hover:text-foreground transition-colors">
+                  Услуги
                 </a>
               </li>
               <li>
-                <a href="#services" className="hover:text-foreground transition-colors">
-                  Услуги
+                <a href="#catalog" className="hover:text-foreground transition-colors">
+                  Каталог
                 </a>
               </li>
               <li>

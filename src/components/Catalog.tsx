@@ -1,54 +1,7 @@
 import { useEffect, useRef, useState } from "react"
+import { Link } from "react-router-dom"
 import { HighlightedText } from "./HighlightedText"
-
-const catalogGroups = [
-  {
-    title: "Скамейки",
-    description: "Уличная мебель для парков, скверов и придомовых территорий",
-    items: [
-      {
-        name: "Скамья классическая",
-        image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/files/fb4688d8-8e52-45a2-9cda-5c13bc98e814.jpg",
-      },
-      {
-        name: "Скамья дизайнерская изогнутая",
-        image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/files/91e1003d-493c-4cb6-ad01-0a61f8a1f369.jpg",
-      },
-    ],
-  },
-  {
-    title: "Детские и спортивные площадки",
-    description: "Игровые и тренировочные комплексы для активного отдыха",
-    items: [
-      {
-        name: "Детский игровой комплекс",
-        image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/files/87612971-a49c-4074-b01e-d9c2b9f8cccc.jpg",
-      },
-      {
-        name: "Спортивная воркаут-зона",
-        image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/files/6559743c-db7a-476d-84b8-ba85914d52a2.jpg",
-      },
-      {
-        name: "Детская площадка с канатной сеткой",
-        image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/files/3f055736-12a5-4924-951f-9ade1c2e3b6e.jpg",
-      },
-    ],
-  },
-  {
-    title: "Площадки для выгула животных",
-    description: "Огороженные зоны с препятствиями для дрессировки и прогулок",
-    items: [
-      {
-        name: "Площадка для выгула с ограждением",
-        image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/files/60c36c21-0dad-474e-a08c-1df671f8b506.jpg",
-      },
-      {
-        name: "Комплекс препятствий для собак",
-        image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/files/d21fdf67-4a22-4a16-875d-ff99bb338775.jpg",
-      },
-    ],
-  },
-]
+import { catalogGroups } from "../data/catalogData"
 
 export function Catalog() {
   const [visibleGroups, setVisibleGroups] = useState<number[]>([])
@@ -87,7 +40,7 @@ export function Catalog() {
         <div className="space-y-20">
           {catalogGroups.map((group, groupIndex) => (
             <div
-              key={group.title}
+              key={group.slug}
               ref={(el) => {
                 groupRefs.current[groupIndex] = el
               }}
@@ -97,12 +50,19 @@ export function Catalog() {
               }`}
             >
               <div className="flex items-baseline justify-between gap-4 mb-8">
-                <h3 className="text-2xl md:text-3xl font-medium tracking-tight">{group.title}</h3>
+                <Link to={`/catalog/${group.slug}`} className="group inline-flex items-baseline gap-3">
+                  <h3 className="text-2xl md:text-3xl font-medium tracking-tight group-hover:text-[rgb(251,146,60)] transition-colors">
+                    {group.title}
+                  </h3>
+                  <span className="text-sm text-muted-foreground group-hover:text-[rgb(251,146,60)] transition-colors">
+                    Смотреть все →
+                  </span>
+                </Link>
                 <span className="text-muted-foreground text-sm hidden md:block">{group.description}</span>
               </div>
 
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {group.items.map((item) => (
+              <Link to={`/catalog/${group.slug}`} className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {group.items.slice(0, 3).map((item) => (
                   <div key={item.name} className="group cursor-pointer">
                     <div className="relative overflow-hidden aspect-[4/3] mb-4 bg-muted">
                       <img
@@ -114,7 +74,7 @@ export function Catalog() {
                     <p className="font-medium group-hover:text-[rgb(251,146,60)] transition-colors">{item.name}</p>
                   </div>
                 ))}
-              </div>
+              </Link>
             </div>
           ))}
         </div>
