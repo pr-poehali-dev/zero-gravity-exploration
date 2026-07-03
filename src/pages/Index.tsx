@@ -13,8 +13,8 @@ export default function Index() {
     <main className="min-h-screen">
       <Header />
       <Hero />
-      <Expertise />
       <Catalog />
+      <Expertise />
       <Projects />
       <FAQ />
       <CallToAction />

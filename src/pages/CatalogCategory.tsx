@@ -1,3 +1,4 @@
+import { useEffect } from "react"
 import { useParams, Link } from "react-router-dom"
 import { ArrowLeft } from "lucide-react"
 import { Header } from "../components/Header"
@@ -8,6 +9,10 @@ import { catalogGroups } from "../data/catalogData"
 export default function CatalogCategory() {
   const { slug } = useParams<{ slug: string }>()
   const group = catalogGroups.find((g) => g.slug === slug)
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior })
+  }, [slug])
 
   if (!group) {
     return (
