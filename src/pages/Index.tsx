@@ -6,6 +6,7 @@ import { Expertise } from "../components/Expertise"
 import { FAQ } from "../components/FAQ"
 import { CallToAction } from "../components/CallToAction"
 import { Footer } from "../components/Footer"
+import { ScrollToTop } from "../components/ScrollToTop"
 
 export default function Index() {
   return (
@@ -13,11 +14,12 @@ export default function Index() {
       <Header />
       <Hero />
       <Philosophy />
-      <Projects />
       <Expertise />
+      <Projects />
       <FAQ />
       <CallToAction />
       <Footer />
+      <ScrollToTop />
     </main>
   )
 }

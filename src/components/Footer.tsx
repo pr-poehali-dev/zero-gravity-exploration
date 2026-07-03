@@ -6,30 +6,55 @@ export function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <a href="/" className="inline-block mb-6">
-              <img src="/images/hously-logo.svg" alt="Пространство" width={120} height={32} className="w-auto h-6" />
+              <span className="text-xl font-semibold tracking-tight" style={{ fontFamily: "'Rubik', sans-serif" }}>
+                Про-МАФ
+              </span>
             </a>
-            <p className="text-muted-foreground leading-relaxed max-w-sm">
-              Создаем пространства для жизни. Архитектурный опыт, где форма, свет и намерение встречаются.
+            <p className="text-muted-foreground leading-relaxed max-w-sm mb-6">
+              Строительство, проектирование и инжиниринг под ключ. Реализуем объекты любой сложности — от жилых
+              комплексов до общественных пространств.
             </p>
+            <form
+              onSubmit={(e) => e.preventDefault()}
+              className="flex max-w-sm border border-border"
+            >
+              <input
+                type="email"
+                required
+                placeholder="Подписка на новости"
+                className="flex-1 bg-transparent px-4 py-3 text-sm placeholder:text-muted-foreground focus:outline-none"
+              />
+              <button
+                type="submit"
+                className="bg-foreground text-primary-foreground px-5 text-sm hover:bg-[rgb(251,146,60)] transition-colors"
+              >
+                ОК
+              </button>
+            </form>
           </div>
 
           {/* Navigation */}
           <div>
-            <h4 className="text-sm font-medium mb-4">Студия</h4>
+            <h4 className="text-sm font-medium mb-4">Меню</h4>
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li>
-                <a href="#projects" className="hover:text-foreground transition-colors">
-                  Проекты
+                <a href="#hero" className="hover:text-foreground transition-colors">
+                  Главная
                 </a>
               </li>
               <li>
                 <a href="#about" className="hover:text-foreground transition-colors">
-                  О нас
+                  О компании
                 </a>
               </li>
               <li>
                 <a href="#services" className="hover:text-foreground transition-colors">
                   Услуги
+                </a>
+              </li>
+              <li>
+                <a href="#projects" className="hover:text-foreground transition-colors">
+                  Наши проекты
                 </a>
               </li>
               <li>
@@ -45,8 +70,8 @@ export function Footer() {
             <h4 className="text-sm font-medium mb-4">Связь</h4>
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li>
-                <a href="mailto:hello@prostranstvo.ru" className="hover:text-foreground transition-colors">
-                  hello@prostranstvo.ru
+                <a href="mailto:info@pro-maf.ru" className="hover:text-foreground transition-colors">
+                  info@pro-maf.ru
                 </a>
               </li>
               <li>
@@ -70,7 +95,7 @@ export function Footer() {
 
         {/* Bottom bar */}
         <div className="pt-8 border-t border-border flex flex-col md:flex-row md:items-center justify-between gap-4 text-sm text-muted-foreground">
-          <p>© 2025 Пространство. Все права защищены.</p>
+          <p>© 2025 Про-МАФ. Все права защищены.</p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-foreground transition-colors">
               Политика конфиденциальности

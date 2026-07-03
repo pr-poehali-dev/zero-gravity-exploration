@@ -120,10 +120,11 @@ export function Hero() {
     <section id="hero" ref={heroRef} className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <img
-          src="/images/hously-background.png"
-          alt="Минималистичный архитектурный интерьер"
+          src="https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/files/6c5de204-71dd-456c-a890-78dc57dede38.jpg"
+          alt="Строительная площадка Про-МАФ"
           className="w-full h-full object-cover object-center"
         />
+        <div className="absolute inset-0 bg-black/40" />
       </div>
 
       <div
@@ -136,26 +137,37 @@ export function Hero() {
           transformStyle: "preserve-3d",
         }}
       >
-        <div className="mb-72 md:mb-60 lg:mb-80">
-          <p className="text-sm tracking-[0.3em] uppercase text-center text-secondary mb-0">{"Архитектурная студия"}</p>
+        <div className="mb-16">
+          <p className="text-sm tracking-[0.3em] uppercase text-center text-orange-200 mb-6">{"Строительство · Проектирование · Инжиниринг"}</p>
 
           <h1
             ref={titleRef}
-            className="text-7xl font-medium text-balance text-center text-white mb-0 tracking-tight leading-[0.9] lg:text-8xl"
+            className="text-6xl font-medium text-balance text-center text-white mb-6 tracking-tight leading-[0.95] lg:text-8xl"
           >
-            {"Создаем пространства"}
+            {"Строим будущее"}
             <br />
-            <span className="text-orange-200">{"для жизни"}</span>
+            <span className="text-orange-200">{"вместе"}</span>
           </h1>
-        </div>
-      </div>
 
-      <div className="absolute inset-0 z-20 pointer-events-none">
-        <img
-          src="/images/hously-foreground.png"
-          alt="Мраморная кухонная столешница"
-          className="w-full h-full object-cover object-center"
-        />
+          <p className="text-lg md:text-xl text-white/90 text-center max-w-2xl mx-auto mb-10">
+            Проектирование, строительство и инжиниринг под ключ
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="#projects"
+              className="inline-flex items-center justify-center gap-2 bg-white text-foreground px-8 py-4 text-sm tracking-wide hover:bg-[rgb(251,146,60)] hover:text-white transition-colors duration-300"
+            >
+              Наши проекты
+            </a>
+            <a
+              href="#contact"
+              className="inline-flex items-center justify-center gap-2 border border-white/50 text-white px-8 py-4 text-sm tracking-wide hover:bg-white hover:text-foreground transition-colors duration-300"
+            >
+              Связаться с нами
+            </a>
+          </div>
+        </div>
       </div>
 
       {animationComplete && (

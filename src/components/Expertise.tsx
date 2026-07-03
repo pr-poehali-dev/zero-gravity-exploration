@@ -1,30 +1,31 @@
 import { useEffect, useRef, useState } from "react"
-import { Home, Building, Armchair, Trees } from "lucide-react"
+import { HardHat, DraftingCompass, Cog, PencilRuler } from "lucide-react"
 import { HighlightedText } from "./HighlightedText"
 
 const expertiseAreas = [
   {
-    title: "Жилая архитектура",
-    description: "Создаем дома, которые сочетают красоту с комфортом, где каждое пространство служит и форме, и функции.",
-    icon: Home,
+    title: "Генеральный подряд",
+    description:
+      "Реализуем строительство под ключ: от подготовки площадки до сдачи объекта. Полный контроль сроков, качества и бюджета на каждом этапе.",
+    icon: HardHat,
   },
   {
-    title: "Коммерческие объекты",
+    title: "Проектирование",
     description:
-      "Проектируем рабочие пространства, которые вдохновляют на продуктивность и отражают ценности передовых организаций.",
-    icon: Building,
+      "Разрабатываем архитектурные и конструктивные решения, готовим полный комплект проектной и рабочей документации с прохождением экспертизы.",
+    icon: DraftingCompass,
   },
   {
-    title: "Дизайн интерьеров",
+    title: "Инженерные системы",
     description:
-      "Создаем интерьеры, которые гармонируют с архитектурной оболочкой, формируя целостный пространственный опыт.",
-    icon: Armchair,
+      "Проектируем и монтируем отопление, вентиляцию, водоснабжение, электрику и слаботочные сети с гарантией надёжной эксплуатации.",
+    icon: Cog,
   },
   {
-    title: "Градостроительство",
+    title: "Разработка дизайн-проекта",
     description:
-      "Формируем сообщества через продуманную интеграцию общественных пространств, зданий и природных элементов.",
-    icon: Trees,
+      "Создаём функциональные и эстетичные концепции благоустройства, общественных и жилых пространств с учётом задач заказчика.",
+    icon: PencilRuler,
   },
 ]
 
@@ -58,13 +59,11 @@ export function Expertise() {
       <div className="container mx-auto px-6 md:px-12">
         <div className="max-w-3xl mb-20">
           <p className="text-muted-foreground text-sm tracking-[0.3em] uppercase mb-6">Наши услуги</p>
-          <h2 className="text-6xl font-medium leading-[1.15] tracking-tight mb-6 text-balance lg:text-8xl">
-            <HighlightedText>Экспертиза</HighlightedText>, отточенная
-            <br />
-            практикой
+          <h2 className="text-5xl font-medium leading-[1.1] tracking-tight mb-6 text-balance lg:text-7xl">
+            Полный цикл <HighlightedText>под ключ</HighlightedText>
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            Каждый проект опирается на десятилетия совокупного опыта, создавая архитектуру, которая одновременно инновационна и вневременна.
+            Берём на себя весь процесс — от инженерных изысканий и проектирования до строительства и запуска объекта в эксплуатацию.
           </p>
         </div>
 
@@ -78,7 +77,7 @@ export function Expertise() {
                   itemRefs.current[index] = el
                 }}
                 data-index={index}
-                className={`relative pl-8 border-l border-border transition-all duration-700 ${
+                className={`relative p-8 bg-card border border-border rounded-lg transition-all duration-700 hover:-translate-y-2 hover:shadow-xl ${
                   visibleItems.includes(index) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
                 }`}
                 style={{ transitionDelay: `${index * 150}ms` }}

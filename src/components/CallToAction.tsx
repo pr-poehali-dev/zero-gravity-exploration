@@ -1,37 +1,102 @@
-import { ArrowRight } from "lucide-react"
-import { HighlightedText } from "./HighlightedText"
+import { useState } from "react"
+import { MapPin, Phone, Mail } from "lucide-react"
 
 export function CallToAction() {
+  const [submitted, setSubmitted] = useState(false)
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    setSubmitted(true)
+  }
+
   return (
-    <section id="contact" className="py-32 md:py-29 bg-foreground text-primary-foreground">
+    <section id="contact" className="py-24 md:py-32 bg-foreground text-primary-foreground">
       <div className="container mx-auto px-6 md:px-12">
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="text-primary-foreground/60 text-sm tracking-[0.3em] uppercase mb-8">Начать проект</p>
-
-          <h2 className="text-3xl md:text-4xl lg:text-6xl font-medium leading-[1.1] tracking-tight mb-8 text-balance">
-            Готовы создать
-            <br />
-            нечто <HighlightedText>выдающееся</HighlightedText>?
+        <div className="max-w-2xl mb-16">
+          <p className="text-primary-foreground/60 text-sm tracking-[0.3em] uppercase mb-6">Контакты</p>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium leading-[1.1] tracking-tight text-balance">
+            Обсудим ваш проект
           </h2>
+        </div>
 
-          <p className="text-primary-foreground/70 text-lg md:text-xl leading-relaxed mb-12 max-w-2xl mx-auto">
-            Давайте обсудим, как воплотить вашу идею в жизнь. Каждое великое пространство начинается с разговора.
-          </p>
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
+          {/* Left - map & contacts */}
+          <div>
+            <div className="aspect-[4/3] w-full overflow-hidden rounded-lg mb-8">
+              <iframe
+                title="Карта Про-МАФ"
+                src="https://yandex.ru/map-widget/v1/?ll=37.442%2C55.615&z=15&text=Бизнес-парк%20Румянцево"
+                className="w-full h-full border-0 grayscale"
+                loading="lazy"
+              />
+            </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="mailto:hello@prostranstvo.ru"
-              className="inline-flex items-center justify-center gap-3 bg-primary-foreground text-foreground px-8 py-4 text-sm tracking-wide hover:bg-primary-foreground/90 transition-colors duration-300 group"
-            >
-              Начать диалог
-              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-            </a>
-            <a
-              href="tel:+74951234567"
-              className="inline-flex items-center justify-center gap-2 border border-primary-foreground/30 px-8 py-4 text-sm tracking-wide hover:bg-primary-foreground/10 transition-colors duration-300"
-            >
-              Назначить звонок
-            </a>
+            <ul className="space-y-4">
+              <li className="flex items-start gap-3">
+                <MapPin className="w-5 h-5 mt-0.5 text-orange-200 flex-shrink-0" strokeWidth={1.5} />
+                <span className="text-primary-foreground/80">
+                  Бизнес-парк «Румянцево», Москва, Киевское шоссе, 22-й км
+                </span>
+              </li>
+              <li className="flex items-center gap-3">
+                <Phone className="w-5 h-5 text-orange-200 flex-shrink-0" strokeWidth={1.5} />
+                <a href="tel:+74951234567" className="text-primary-foreground/80 hover:text-white transition-colors">
+                  +7 (495) 123-45-67
+                </a>
+              </li>
+              <li className="flex items-center gap-3">
+                <Mail className="w-5 h-5 text-orange-200 flex-shrink-0" strokeWidth={1.5} />
+                <a href="mailto:info@pro-maf.ru" className="text-primary-foreground/80 hover:text-white transition-colors">
+                  info@pro-maf.ru
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Right - form */}
+          <div>
+            {submitted ? (
+              <div className="h-full flex flex-col items-center justify-center text-center py-16">
+                <div className="w-16 h-16 rounded-full bg-orange-200/20 flex items-center justify-center mb-6">
+                  <Mail className="w-7 h-7 text-orange-200" strokeWidth={1.5} />
+                </div>
+                <h3 className="text-2xl font-medium mb-2">Спасибо за заявку!</h3>
+                <p className="text-primary-foreground/70 max-w-sm">
+                  Мы получили ваше сообщение и свяжемся с вами в ближайшее время.
+                </p>
+              </div>
+            ) : (
+              <form onSubmit={handleSubmit} className="space-y-5">
+                <input
+                  type="text"
+                  required
+                  placeholder="Ваше имя"
+                  className="w-full bg-transparent border border-primary-foreground/20 px-5 py-4 text-sm placeholder:text-primary-foreground/40 focus:outline-none focus:border-orange-200 transition-colors"
+                />
+                <input
+                  type="tel"
+                  required
+                  placeholder="Телефон"
+                  className="w-full bg-transparent border border-primary-foreground/20 px-5 py-4 text-sm placeholder:text-primary-foreground/40 focus:outline-none focus:border-orange-200 transition-colors"
+                />
+                <input
+                  type="email"
+                  placeholder="Электронная почта"
+                  className="w-full bg-transparent border border-primary-foreground/20 px-5 py-4 text-sm placeholder:text-primary-foreground/40 focus:outline-none focus:border-orange-200 transition-colors"
+                />
+                <textarea
+                  rows={4}
+                  placeholder="Сообщение"
+                  className="w-full bg-transparent border border-primary-foreground/20 px-5 py-4 text-sm placeholder:text-primary-foreground/40 focus:outline-none focus:border-orange-200 transition-colors resize-none"
+                />
+                <button
+                  type="submit"
+                  className="w-full bg-primary-foreground text-foreground px-8 py-4 text-sm tracking-wide hover:bg-orange-200 transition-colors duration-300"
+                >
+                  Отправить
+                </button>
+              </form>
+            )}
           </div>
         </div>
       </div>
