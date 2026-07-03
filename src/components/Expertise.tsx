@@ -1,6 +1,13 @@
 import { useEffect, useRef, useState } from "react"
 import { HardHat, DraftingCompass, Cog, PencilRuler } from "lucide-react"
 import { HighlightedText } from "./HighlightedText"
+import { SectionBackground } from "./SectionBackground"
+
+const backgroundImages = [
+  "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/files/9254bc9c-eac9-4b75-b64c-aa7eb0d3effd.jpg",
+  "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/files/c159ff37-a2de-4c7a-be07-f3cfcb1be72f.jpg",
+  "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/files/524a95d9-883e-42d1-9bf8-946c5d9cdbaf.jpg",
+]
 
 const expertiseAreas = [
   {
@@ -55,8 +62,9 @@ export function Expertise() {
   }, [])
 
   return (
-    <section id="services" ref={sectionRef} className="py-32 md:py-29">
-      <div className="container mx-auto px-6 md:px-12">
+    <section id="services" ref={sectionRef} className="relative py-32 md:py-29 overflow-hidden">
+      <SectionBackground images={backgroundImages} overlayClassName="bg-background/95" />
+      <div className="container mx-auto px-6 md:px-12 relative z-10">
         <div className="max-w-3xl mb-20">
           <p className="text-muted-foreground text-sm tracking-[0.3em] uppercase mb-6">Наши услуги</p>
           <h2 className="text-5xl font-medium leading-[1.1] tracking-tight mb-6 text-balance lg:text-7xl">

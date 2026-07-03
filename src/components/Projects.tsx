@@ -1,5 +1,12 @@
 import { useState, useEffect, useRef } from "react"
 import { ArrowUpRight } from "lucide-react"
+import { SectionBackground } from "./SectionBackground"
+
+const backgroundImages = [
+  "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/files/60c36c21-0dad-474e-a08c-1df671f8b506.jpg",
+  "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/files/6559743c-db7a-476d-84b8-ba85914d52a2.jpg",
+  "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/files/1debfddf-768e-462d-8155-f3cadfdbf428.jpg",
+]
 
 const projects = [
   {
@@ -64,8 +71,9 @@ export function Projects() {
   }, [])
 
   return (
-    <section id="projects" className="py-32 md:py-29 bg-secondary/50">
-      <div className="container mx-auto px-6 md:px-12">
+    <section id="projects" className="relative py-32 md:py-29 overflow-hidden">
+      <SectionBackground images={backgroundImages} overlayClassName="bg-secondary/90" />
+      <div className="container mx-auto px-6 md:px-12 relative z-10">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
           <div>
             <p className="text-muted-foreground text-sm tracking-[0.3em] uppercase mb-6">Избранные работы</p>

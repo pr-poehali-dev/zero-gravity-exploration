@@ -1,5 +1,11 @@
 import { useState } from "react"
 import { Plus } from "lucide-react"
+import { SectionBackground } from "./SectionBackground"
+
+const backgroundImages = [
+  "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/files/a626e607-56de-4706-85b9-7323b2fc512b.jpg",
+  "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/files/8af3d4f2-4d68-44c9-8ed7-10dbc224b92b.jpg",
+]
 
 const faqs = [
   {
@@ -42,8 +48,9 @@ export function FAQ() {
   }
 
   return (
-    <section id="faq" className="py-20 md:py-29">
-      <div className="container mx-auto px-6 md:px-12">
+    <section id="faq" className="relative py-20 md:py-29 overflow-hidden">
+      <SectionBackground images={backgroundImages} overlayClassName="bg-background/95" />
+      <div className="container mx-auto px-6 md:px-12 relative z-10">
         <div className="max-w-3xl mb-16">
           <p className="text-muted-foreground text-sm tracking-[0.3em] uppercase mb-6">Вопросы</p>
           <h2 className="text-6xl font-medium leading-[1.15] tracking-tight mb-6 text-balance lg:text-7xl">

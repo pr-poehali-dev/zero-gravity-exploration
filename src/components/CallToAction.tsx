@@ -1,5 +1,11 @@
 import { useState } from "react"
 import { MapPin, Phone, Mail } from "lucide-react"
+import { SectionBackground } from "./SectionBackground"
+
+const backgroundImages = [
+  "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/files/b5c130e6-78d3-4358-94c3-97c6d515ea0f.jpg",
+  "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/files/d6d57f2f-d5fe-4ea7-a93c-d1f6ff5d48ed.jpg",
+]
 
 export function CallToAction() {
   const [submitted, setSubmitted] = useState(false)
@@ -10,8 +16,9 @@ export function CallToAction() {
   }
 
   return (
-    <section id="contact" className="py-24 md:py-32 bg-foreground text-primary-foreground">
-      <div className="container mx-auto px-6 md:px-12">
+    <section id="contact" className="relative py-24 md:py-32 text-primary-foreground overflow-hidden">
+      <SectionBackground images={backgroundImages} overlayClassName="bg-foreground/95" />
+      <div className="container mx-auto px-6 md:px-12 relative z-10">
         <div className="max-w-2xl mb-16">
           <p className="text-primary-foreground/60 text-sm tracking-[0.3em] uppercase mb-6">Контакты</p>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium leading-[1.1] tracking-tight text-balance">

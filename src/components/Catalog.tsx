@@ -1,7 +1,15 @@
 import { useEffect, useRef, useState } from "react"
 import { Link } from "react-router-dom"
 import { HighlightedText } from "./HighlightedText"
+import { SectionBackground } from "./SectionBackground"
 import { catalogGroups } from "../data/catalogData"
+
+const backgroundImages = [
+  "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/files/fdd6ce4f-d8ee-471f-8988-376df1ed3065.jpg",
+  "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/files/191f560d-c6b2-4c52-a193-d7fea7478ec9.jpg",
+  "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/files/aaf5086b-aa19-48b3-ac1c-bbf3f6db69d2.jpg",
+  "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/files/4f3b5065-e560-42ae-8c8d-fda14a8ca4d2.jpg",
+]
 
 export function Catalog() {
   const [visibleGroups, setVisibleGroups] = useState<number[]>([])
@@ -28,8 +36,9 @@ export function Catalog() {
   }, [])
 
   return (
-    <section id="catalog" className="py-24 md:py-32 bg-secondary/50">
-      <div className="container mx-auto px-6 md:px-12">
+    <section id="catalog" className="relative py-24 md:py-32 overflow-hidden">
+      <SectionBackground images={backgroundImages} overlayClassName="bg-secondary/90" />
+      <div className="container mx-auto px-6 md:px-12 relative z-10">
         <div className="max-w-2xl mb-16">
           <p className="text-muted-foreground text-sm tracking-[0.3em] uppercase mb-6">Каталог продукции</p>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium leading-[1.1] tracking-tight text-balance">
