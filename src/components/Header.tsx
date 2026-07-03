@@ -61,12 +61,6 @@ export function Header() {
           <a href="tel:+74951234567" className="text-sm text-white font-medium whitespace-nowrap">
             +7 (495) 123-45-67
           </a>
-          <a
-            href="#contact"
-            className="inline-flex items-center gap-2 text-sm px-5 py-2.5 transition-all duration-300 bg-white text-foreground border border-foreground/20 hover:bg-[rgb(251,146,60)] hover:text-white hover:border-transparent"
-          >
-            Заказать звонок
-          </a>
         </div>
 
         <button
@@ -121,13 +115,6 @@ export function Header() {
             onClick={closeMobileMenu}
           >
             +7 (495) 123-45-67
-          </a>
-          <a
-            href="#contact"
-            className="inline-flex items-center justify-center gap-2 text-sm px-5 py-2.5 bg-white text-foreground border border-foreground/20 hover:bg-[rgb(251,146,60)] hover:text-white transition-all duration-300 mb-4"
-            onClick={closeMobileMenu}
-          >
-            Заказать звонок
           </a>
         </div>
       </div>
