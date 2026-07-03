@@ -1,15 +1,30 @@
 import { useEffect, useRef, useState } from "react"
 import { ArrowDown } from "lucide-react"
 
+const backgroundImages = [
+  "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/files/d6d57f2f-d5fe-4ea7-a93c-d1f6ff5d48ed.jpg",
+  "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/files/87612971-a49c-4074-b01e-d9c2b9f8cccc.jpg",
+  "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/files/191f560d-c6b2-4c52-a193-d7fea7478ec9.jpg",
+  "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/files/4f3b5065-e560-42ae-8c8d-fda14a8ca4d2.jpg",
+]
+
 export function Hero() {
   const contentRef = useRef<HTMLDivElement>(null)
   const heroRef = useRef<HTMLElement>(null)
   const titleRef = useRef<HTMLHeadingElement>(null)
   const [animationProgress, setAnimationProgress] = useState(0)
   const [animationComplete, setAnimationComplete] = useState(false)
+  const [activeImage, setActiveImage] = useState(0)
   const accumulatedScrollRef = useRef(0)
   const touchStartY = useRef<number>(0)
   const lastTouchY = useRef<number>(0)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveImage((prev) => (prev + 1) % backgroundImages.length)
+    }, 5000)
+    return () => clearInterval(interval)
+  }, [])
 
   useEffect(() => {
     const handleWheel = (e: WheelEvent) => {
@@ -119,11 +134,15 @@ export function Hero() {
   return (
     <section id="hero" ref={heroRef} className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
-        <img
-          src="https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/files/d6d57f2f-d5fe-4ea7-a93c-d1f6ff5d48ed.jpg"
-          alt="Малые архитектурные формы Про-МАФ"
-          className="w-full h-full object-cover object-center"
-        />
+        {backgroundImages.map((src, index) => (
+          <img
+            key={src}
+            src={src}
+            alt="Малые архитектурные формы Про-МАФ"
+            className="absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-[2000ms] ease-in-out"
+            style={{ opacity: activeImage === index ? 1 : 0 }}
+          />
+        ))}
         <div className="absolute inset-0 bg-black/40" />
       </div>
 
