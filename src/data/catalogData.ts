@@ -17,7 +17,7 @@ export const catalogGroups: CatalogGroup[] = [
     description: "Уличная мебель для парков, скверов и придомовых территорий",
     items: [
       { name: "Скамья классическая", image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/files/fb4688d8-8e52-45a2-9cda-5c13bc98e814.jpg" },
-      { name: "Скамья дизайнерская изогнутая", image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/files/91e1003d-493c-4cb6-ad01-0a61f8a1f369.jpg" },
+      { name: "Скамья на бетоне", image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/files/91e1003d-493c-4cb6-ad01-0a61f8a1f369.jpg" },
       { name: "Скамья на металлических опорах", image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/files/42a73530-38b1-45c2-aeab-9743ebeb5134.jpg" },
       { name: "Скамья бетонная с деревянным сиденьем", image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/files/3374ffde-6ac3-4714-92a5-bde6964bdaeb.jpg" },
       { name: "Скамья с подлокотниками", image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/files/725a5222-fd40-4ffd-a466-8f8424e17ecd.jpg" },
