@@ -58,7 +58,7 @@ export function Catalog() {
                 visibleGroups.includes(groupIndex) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
             >
-              <div className="flex items-baseline justify-between gap-4 mb-8">
+              <div className="flex items-baseline justify-between gap-4 mb-4">
                 <Link to={`/catalog/${group.slug}`} className="group inline-flex items-baseline gap-3">
                   <h3 className="text-2xl md:text-3xl font-medium tracking-tight group-hover:text-[rgb(251,146,60)] transition-colors">
                     {group.title}
@@ -70,19 +70,34 @@ export function Catalog() {
                 <span className="text-muted-foreground text-sm hidden md:block">{group.description}</span>
               </div>
 
-              <Link to={`/catalog/${group.slug}`} className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {group.items.slice(0, 3).map((item) => (
-                  <div key={item.name} className="group cursor-pointer">
-                    <div className="relative overflow-hidden aspect-[4/3] mb-4 bg-muted">
-                      <img
-                        src={item.image}
-                        alt={item.name}
-                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                      />
-                    </div>
-                    <p className="font-medium group-hover:text-[rgb(251,146,60)] transition-colors">{item.name}</p>
-                  </div>
+              <div className="flex flex-wrap gap-2 mb-8">
+                {Array.from(new Set(group.items.map((item) => item.subcategory))).map((subcategory) => (
+                  <span
+                    key={subcategory}
+                    className="text-xs tracking-wide uppercase px-3 py-1.5 rounded-full bg-background/60 border border-border text-muted-foreground"
+                  >
+                    {subcategory}
+                  </span>
                 ))}
+              </div>
+
+              <Link to={`/catalog/${group.slug}`} className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {Array.from(new Set(group.items.map((item) => item.subcategory)))
+                  .slice(0, 3)
+                  .map((subcategory) => group.items.find((item) => item.subcategory === subcategory)!)
+                  .map((item) => (
+                    <div key={item.name} className="group cursor-pointer">
+                      <div className="relative overflow-hidden aspect-[4/3] mb-4 bg-muted">
+                        <img
+                          src={item.image}
+                          alt={item.name}
+                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
+                      </div>
+                      <p className="text-xs tracking-wide uppercase text-muted-foreground mb-1">{item.subcategory}</p>
+                      <p className="font-medium group-hover:text-[rgb(251,146,60)] transition-colors">{item.name}</p>
+                    </div>
+                  ))}
               </Link>
             </div>
           ))}
