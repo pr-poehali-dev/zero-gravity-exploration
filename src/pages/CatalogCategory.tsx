@@ -1,5 +1,5 @@
 import { useEffect } from "react"
-import { useParams, Link } from "react-router-dom"
+import { useParams, useSearchParams, Link } from "react-router-dom"
 import { ArrowLeft } from "lucide-react"
 import { Header } from "../components/Header"
 import { Footer } from "../components/Footer"
@@ -8,11 +8,20 @@ import { catalogGroups } from "../data/catalogData"
 
 export default function CatalogCategory() {
   const { slug } = useParams<{ slug: string }>()
+  const [searchParams] = useSearchParams()
+  const activeSubcategory = searchParams.get("subcategory")
   const group = catalogGroups.find((g) => g.slug === slug)
 
   useEffect(() => {
+    if (activeSubcategory) {
+      const el = document.getElementById(`subcategory-${activeSubcategory}`)
+      if (el) {
+        el.scrollIntoView({ behavior: "instant" as ScrollBehavior, block: "start" })
+        return
+      }
+    }
     window.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior })
-  }, [slug])
+  }, [slug, activeSubcategory])
 
   if (!group) {
     return (
@@ -49,7 +58,13 @@ export default function CatalogCategory() {
 
           <div className="space-y-16">
             {Array.from(new Set(group.items.map((item) => item.subcategory))).map((subcategory) => (
-              <div key={subcategory}>
+              <div
+                key={subcategory}
+                id={`subcategory-${subcategory}`}
+                className={`scroll-mt-32 rounded-lg transition-colors duration-500 ${
+                  activeSubcategory === subcategory ? "ring-2 ring-[rgb(251,146,60)] ring-offset-4 ring-offset-background p-4 -m-4" : ""
+                }`}
+              >
                 <h2 className="text-2xl md:text-3xl font-medium tracking-tight mb-8 pb-4 border-b border-border">
                   {subcategory}
                 </h2>

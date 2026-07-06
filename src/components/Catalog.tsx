@@ -72,21 +72,26 @@ export function Catalog() {
 
               <div className="flex flex-wrap gap-2 mb-8">
                 {Array.from(new Set(group.items.map((item) => item.subcategory))).map((subcategory) => (
-                  <span
+                  <Link
                     key={subcategory}
-                    className="text-xs tracking-wide uppercase px-3 py-1.5 rounded-full bg-background/60 border border-border text-muted-foreground"
+                    to={`/catalog/${group.slug}?subcategory=${encodeURIComponent(subcategory)}`}
+                    className="text-xs tracking-wide uppercase px-3 py-1.5 rounded-full bg-background/60 border border-border text-muted-foreground hover:border-[rgb(251,146,60)] hover:text-[rgb(251,146,60)] transition-colors"
                   >
                     {subcategory}
-                  </span>
+                  </Link>
                 ))}
               </div>
 
-              <Link to={`/catalog/${group.slug}`} className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {Array.from(new Set(group.items.map((item) => item.subcategory)))
                   .slice(0, 3)
                   .map((subcategory) => group.items.find((item) => item.subcategory === subcategory)!)
                   .map((item) => (
-                    <div key={item.name} className="group cursor-pointer">
+                    <Link
+                      key={item.name}
+                      to={`/catalog/${group.slug}?subcategory=${encodeURIComponent(item.subcategory)}`}
+                      className="group cursor-pointer"
+                    >
                       <div className="relative overflow-hidden aspect-[4/3] mb-4 bg-muted">
                         <img
                           src={item.image}
@@ -96,9 +101,9 @@ export function Catalog() {
                       </div>
                       <p className="text-xs tracking-wide uppercase text-muted-foreground mb-1">{item.subcategory}</p>
                       <p className="font-medium group-hover:text-[rgb(251,146,60)] transition-colors">{item.name}</p>
-                    </div>
+                    </Link>
                   ))}
-              </Link>
+              </div>
             </div>
           ))}
         </div>
