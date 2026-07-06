@@ -1,9 +1,20 @@
 import { useState, useEffect, MouseEvent } from "react"
+import { useNavigate, useLocation } from "react-router-dom"
 import { cn } from "../lib/utils"
+
+const navItems = [
+  { label: "Главная", id: "hero" },
+  { label: "Каталог", id: "catalog" },
+  { label: "Услуги", id: "services" },
+  { label: "Наши проекты", id: "projects" },
+  { label: "Контакты", id: "contact" },
+]
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const navigate = useNavigate()
+  const location = useLocation()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,9 +28,20 @@ export function Header() {
     setMobileMenuOpen(false)
   }
 
-  const scrollToTop = (e: MouseEvent<HTMLAnchorElement>) => {
+  const goToSection = (e: MouseEvent<HTMLAnchorElement>, id: string) => {
     e.preventDefault()
-    window.scrollTo({ top: 0, behavior: "smooth" })
+    closeMobileMenu()
+
+    if (location.pathname === "/") {
+      const el = document.getElementById(id)
+      if (id === "hero" || !el) {
+        window.scrollTo({ top: 0, behavior: "smooth" })
+      } else {
+        el.scrollIntoView({ behavior: "smooth", block: "start" })
+      }
+    } else {
+      navigate(`/#${id}`)
+    }
   }
 
   return (
@@ -32,23 +54,22 @@ export function Header() {
       )}
     >
       <nav className="container mx-auto px-6 flex items-center justify-between md:px-[24]">
-        <a href="/" className="flex items-center gap-2 group" onClick={scrollToTop}>
+        <a
+          href="/"
+          className="flex items-center gap-2 group"
+          onClick={(e) => goToSection(e, "hero")}
+        >
           <span className="text-xl font-semibold tracking-tight text-white" style={{ fontFamily: "'Rubik', sans-serif" }}>
             Про-МАФ
           </span>
         </a>
 
         <ul className="hidden md:flex items-center gap-8 text-sm tracking-wide">
-          {[
-            { label: "Главная", href: "#hero" },
-            { label: "Каталог", href: "#catalog" },
-            { label: "Услуги", href: "#services" },
-            { label: "Наши проекты", href: "#projects" },
-            { label: "Контакты", href: "#contact" },
-          ].map((item) => (
+          {navItems.map((item) => (
             <li key={item.label}>
               <a
-                href={item.href}
+                href={`/#${item.id}`}
+                onClick={(e) => goToSection(e, item.id)}
                 className="hover:text-[rgb(251,146,60)] transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 hover:after:w-full after:bg-[rgb(251,146,60)] after:transition-all after:duration-300 text-white"
               >
                 {item.label}
@@ -90,18 +111,12 @@ export function Header() {
       >
         <div className="container mx-auto px-6">
           <ul className="flex flex-col gap-6 mb-8">
-            {[
-              { label: "Главная", href: "#hero" },
-              { label: "Каталог", href: "#catalog" },
-              { label: "Услуги", href: "#services" },
-              { label: "Наши проекты", href: "#projects" },
-              { label: "Контакты", href: "#contact" },
-            ].map((item) => (
+            {navItems.map((item) => (
               <li key={item.label}>
                 <a
-                  href={item.href}
+                  href={`/#${item.id}`}
                   className="hover:text-[rgb(251,146,60)] transition-colors duration-300 text-white text-4xl font-light block"
-                  onClick={closeMobileMenu}
+                  onClick={(e) => goToSection(e, item.id)}
                 >
                   {item.label}
                 </a>
