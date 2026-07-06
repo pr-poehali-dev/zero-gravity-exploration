@@ -79,11 +79,11 @@ export const catalogGroups: CatalogGroup[] = [
     title: "Перголы",
     description: "Конструкции для навесов и зон отдыха на открытом воздухе",
     items: [
-      { name: "Деревянная пергола с вьющимися растениями", image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/files/191f560d-c6b2-4c52-a193-d7fea7478ec9.jpg" },
-      { name: "Металлическая пергола белая", image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/files/524a95d9-883e-42d1-9bf8-946c5d9cdbaf.jpg" },
-      { name: "Пергола со скамьёй", image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/files/1debfddf-768e-462d-8155-f3cadfdbf428.jpg" },
-      { name: "Пергола чёрная минималистичная", image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/files/8af3d4f2-4d68-44c9-8ed7-10dbc224b92b.jpg" },
-      { name: "Садовая беседка-пергола", image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/files/4896b3f5-2dbc-4a1a-b3b9-c7432c256ac5.jpg" },
+      { name: "Круглая пергола-беседка с местами для отдыха", image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/d9b13500-3d45-4bbb-9577-bfe1aef3b727.png" },
+      { name: "Деревянная пергола с металлическими опорами", image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/fbacd478-2f45-4858-95f3-d3f564150d94.jpg" },
+      { name: "Пергола с реечным экраном и подиумом", image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/d9e94e74-463d-4a75-b781-ddd61ddf6db8.jpg" },
+      { name: "Пергола с зоной отдыха и диваном", image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/4e6b274a-1e62-4795-a298-8b1d68f4e737.jpg" },
+      { name: "Угловая пергола с деревянным настилом", image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/2d9f122e-d8a9-403f-94d2-da8d804e7502.jpg" },
     ],
   },
   {
