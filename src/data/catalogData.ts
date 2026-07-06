@@ -26,6 +26,11 @@ export const catalogGroups: CatalogGroup[] = [
       { name: "Скамья круговая вокруг дерева", image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/files/9f11dc39-9a5c-436f-8366-9d3e32c19f55.jpg" },
       { name: "Смарт-скамья с солнечной панелью", image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/files/91643a4c-ef2b-4ee1-80ed-4f8c6ee83144.jpg" },
       { name: "Скамья детская", image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/files/dbaf2b67-ad8a-4361-b79b-01b65ce523a6.jpg" },
+      { name: "Скамья дугообразная на бетонных опорах", image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/666ef1db-1c04-4cb5-875e-347d46114111.jpg" },
+      { name: "Скамья бетонная монолитная", image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/a757f9c4-1269-4cd6-b272-38a762e2f0ee.png" },
+      { name: "Скамья изогнутая на металлических опорах", image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/cc1ece42-717a-46d0-9849-2c61cde5aefa.jpg" },
+      { name: "Скамья-шестигранник модульная", image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/17bf8760-cbbf-42b3-8451-004a86c1fe86.jpg" },
+      { name: "Скамья с высокой спинкой на металлическом каркасе", image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/13b9ce8e-8d1d-4c58-9e99-52b0b02f19e1.jpg" },
     ],
   },
   {
