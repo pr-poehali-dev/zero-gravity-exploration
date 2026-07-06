@@ -89,6 +89,10 @@ export const catalogGroups: CatalogGroup[] = [
       { name: "Модульная пергола со сплошным навесом", image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/a3e2f846-c67f-438c-aa72-0a2d6860849f.jpg" },
       { name: "Пергола с подвесными скамьями-качелями", image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/66a155a5-fc9d-4c61-a898-aefd63588ab5.jpg" },
       { name: "Пергола с экраном из ламелей и подсветкой", image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/66c8678c-279a-461f-9fdb-897102e8ee53.jpg" },
+      { name: "Игровая пергола-навес с качелями", image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/98214705-b7f2-4245-bd20-2b841ea089e5.jpg" },
+      { name: "Пергола с фигурной опорой и скамьёй", image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/ac14d9a9-f9dd-4a41-999b-ddc69059785f.jpg" },
+      { name: "Пергола с наклонным реечным экраном", image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/ec67e032-a414-4e43-adc8-42a560d926e6.jpg" },
+      { name: "Пергола с зоной отдыха и цветниками", image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/ab5e2bc3-90b2-4cd7-8f10-513e8e7874c0.jpg" },
     ],
   },
   {
