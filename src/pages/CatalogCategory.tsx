@@ -47,17 +47,28 @@ export default function CatalogCategory() {
           </h1>
           <p className="text-muted-foreground text-lg max-w-2xl mb-16">{group.description}</p>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {group.items.map((item) => (
-              <div key={item.name} className="group">
-                <div className="relative overflow-hidden aspect-[4/3] mb-4 bg-muted">
-                  <img
-                    src={item.image}
-                    alt={item.name}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
+          <div className="space-y-16">
+            {Array.from(new Set(group.items.map((item) => item.subcategory))).map((subcategory) => (
+              <div key={subcategory}>
+                <h2 className="text-2xl md:text-3xl font-medium tracking-tight mb-8 pb-4 border-b border-border">
+                  {subcategory}
+                </h2>
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {group.items
+                    .filter((item) => item.subcategory === subcategory)
+                    .map((item) => (
+                      <div key={item.name} className="group">
+                        <div className="relative overflow-hidden aspect-[4/3] mb-4 bg-muted">
+                          <img
+                            src={item.image}
+                            alt={item.name}
+                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                          />
+                        </div>
+                        <p className="font-medium">{item.name}</p>
+                      </div>
+                    ))}
                 </div>
-                <p className="font-medium">{item.name}</p>
               </div>
             ))}
           </div>
