@@ -26,46 +26,31 @@ export function Hero() {
     return () => clearInterval(interval)
   }, [])
 
+  const applyTransform = (progress: number) => {
+    if (contentRef.current) {
+      const translateY = progress * 200
+      const rotationX = progress * 45
+      const scale = 1 - progress * 0.3
+      contentRef.current.style.transform = `translateY(${translateY}px) rotateX(${rotationX}deg) scale(${scale})`
+    }
+  }
+
   useEffect(() => {
     const handleWheel = (e: WheelEvent) => {
       const atTopOfPage = window.scrollY === 0
 
-      if (atTopOfPage && !animationComplete) {
+      if (atTopOfPage && !animationComplete && e.deltaY > 0) {
         e.preventDefault()
-
-        accumulatedScrollRef.current = Math.max(0, Math.min(700, accumulatedScrollRef.current + e.deltaY))
-
-        const newProgress = Math.max(0, Math.min(1, accumulatedScrollRef.current / 700))
-        setAnimationProgress(newProgress)
-
-        if (newProgress >= 1) {
-          setAnimationComplete(true)
-        }
-
-        if (contentRef.current) {
-          const translateY = newProgress * 200
-          const rotationX = newProgress * 45
-          const scale = 1 - newProgress * 0.3
-          contentRef.current.style.transform = `translateY(${translateY}px) rotateX(${rotationX}deg) scale(${scale})`
-        }
+        accumulatedScrollRef.current = 700
+        setAnimationProgress(1)
+        setAnimationComplete(true)
+        applyTransform(1)
       } else if (atTopOfPage && animationComplete && e.deltaY < 0) {
         e.preventDefault()
-
-        accumulatedScrollRef.current = Math.max(0, Math.min(700, accumulatedScrollRef.current + e.deltaY))
-
-        const newProgress = Math.max(0, Math.min(1, accumulatedScrollRef.current / 700))
-        setAnimationProgress(newProgress)
-
-        if (newProgress < 1) {
-          setAnimationComplete(false)
-        }
-
-        if (contentRef.current) {
-          const translateY = newProgress * 200
-          const rotationX = newProgress * 45
-          const scale = 1 - newProgress * 0.3
-          contentRef.current.style.transform = `translateY(${translateY}px) rotateX(${rotationX}deg) scale(${scale})`
-        }
+        accumulatedScrollRef.current = 0
+        setAnimationProgress(0)
+        setAnimationComplete(false)
+        applyTransform(0)
       }
     }
 
@@ -79,42 +64,18 @@ export function Hero() {
       const currentTouchY = e.touches[0].clientY
       const deltaY = lastTouchY.current - currentTouchY
 
-      if (atTopOfPage && !animationComplete) {
+      if (atTopOfPage && !animationComplete && deltaY > 10) {
         e.preventDefault()
-
-        accumulatedScrollRef.current = Math.max(0, Math.min(700, accumulatedScrollRef.current + deltaY * 3))
-
-        const newProgress = Math.max(0, Math.min(1, accumulatedScrollRef.current / 700))
-        setAnimationProgress(newProgress)
-
-        if (newProgress >= 1) {
-          setAnimationComplete(true)
-        }
-
-        if (contentRef.current) {
-          const translateY = newProgress * 200
-          const rotationX = newProgress * 45
-          const scale = 1 - newProgress * 0.3
-          contentRef.current.style.transform = `translateY(${translateY}px) rotateX(${rotationX}deg) scale(${scale})`
-        }
-      } else if (atTopOfPage && animationComplete && deltaY < 0) {
+        accumulatedScrollRef.current = 700
+        setAnimationProgress(1)
+        setAnimationComplete(true)
+        applyTransform(1)
+      } else if (atTopOfPage && animationComplete && deltaY < -10) {
         e.preventDefault()
-
-        accumulatedScrollRef.current = Math.max(0, Math.min(700, accumulatedScrollRef.current + deltaY * 3))
-
-        const newProgress = Math.max(0, Math.min(1, accumulatedScrollRef.current / 700))
-        setAnimationProgress(newProgress)
-
-        if (newProgress < 1) {
-          setAnimationComplete(false)
-        }
-
-        if (contentRef.current) {
-          const translateY = newProgress * 200
-          const rotationX = newProgress * 45
-          const scale = 1 - newProgress * 0.3
-          contentRef.current.style.transform = `translateY(${translateY}px) rotateX(${rotationX}deg) scale(${scale})`
-        }
+        accumulatedScrollRef.current = 0
+        setAnimationProgress(0)
+        setAnimationComplete(false)
+        applyTransform(0)
       }
 
       lastTouchY.current = currentTouchY
@@ -148,7 +109,7 @@ export function Hero() {
 
       <div
         ref={contentRef}
-        className="container mx-auto px-6 md:px-12 lg:pt-0 relative z-10 pb-0 pl-1 pr-1 pt-8 md:pt-0"
+        className="container mx-auto px-6 md:px-12 lg:pt-0 relative z-10 pb-0 pl-1 pr-1 pt-8 md:pt-0 transition-transform duration-700 ease-in-out"
         style={{
           willChange: "transform",
           transform: "translateY(0px)",
