@@ -47,8 +47,8 @@ export function CallToAction() {
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-orange-200 flex-shrink-0" strokeWidth={1.5} />
-                <a href="tel:+74951234567" className="text-primary-foreground/80 hover:text-white transition-colors">
-                  +7 (495) 123-45-67
+                <a href="tel:+79633003033" className="text-primary-foreground/80 hover:text-white transition-colors">
+                  +7 (963) 300-30-33
                 </a>
               </li>
               <li className="flex items-center gap-3">

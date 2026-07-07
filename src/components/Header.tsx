@@ -125,8 +125,8 @@ export function Header() {
         </ul>
 
         <div className="hidden md:flex items-center gap-4">
-          <a href="tel:+74951234567" className="text-sm text-white font-medium whitespace-nowrap">
-            +7 (495) 123-45-67
+          <a href="tel:+79633003033" className="text-sm text-white font-medium whitespace-nowrap">
+            +7 (963) 300-30-33
           </a>
         </div>
 
@@ -214,11 +214,11 @@ export function Header() {
           </ul>
 
           <a
-            href="tel:+74951234567"
+            href="tel:+79633003033"
             className="block text-white text-lg font-medium mb-4"
             onClick={closeMobileMenu}
           >
-            +7 (495) 123-45-67
+            +7 (963) 300-30-33
           </a>
         </div>
       </div>
