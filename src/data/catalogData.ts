@@ -84,6 +84,11 @@ export const catalogGroups: CatalogGroup[] = [
     items: [
       { name: "Кашпо из архитектурного бетона", subcategory: "Кашпо и вазоны", image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/files/fdd6ce4f-d8ee-471f-8988-376df1ed3065.jpg" },
       { name: "Бетонный бордюр для клумбы", subcategory: "Кашпо и вазоны", image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/files/f3d413b6-371a-4bfe-bf1e-44a7d5d58360.jpg" },
+      { name: "Кашпо квадратное гранитное для дерева", subcategory: "Кашпо и вазоны", image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/59b4af45-e758-478d-9004-fe4976e430f7.webp" },
+      { name: "Кашпо круглое каменное для дерева", subcategory: "Кашпо и вазоны", image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/5f52ca1b-38ff-4d60-9a7d-43493f98b2c0.jpg" },
+      { name: "Комплект кашпо-трансформер \"Луна\"", subcategory: "Кашпо и вазоны", image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/1ae1a0e6-451c-44fe-9ea1-455e834f11fa.jpg" },
+      { name: "Кашпо-чаша бетонная тёмная", subcategory: "Кашпо и вазоны", image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/8d7bea14-12b1-4fc1-a0ca-c1af678cf9e1.jpg" },
+      { name: "Кашпо круглое высокое серое", subcategory: "Кашпо и вазоны", image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/78b74fe4-0ae3-4093-b549-a15d6c502192.jpg" },
       { name: "Декоративный бетонный столб-ограничитель", subcategory: "Ограничители и опоры", image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/files/21b4b733-0f1c-4a0e-b4f9-d95b8a4f9f8c.jpg" },
       { name: "Подпорная стена с рельефным узором", subcategory: "Архитектурные элементы", image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/files/c159ff37-a2de-4c7a-be07-f3cfcb1be72f.jpg" },
       { name: "Декоративная бетонная колонна", subcategory: "Архитектурные элементы", image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/files/a626e607-56de-4706-85b9-7323b2fc512b.jpg" },
