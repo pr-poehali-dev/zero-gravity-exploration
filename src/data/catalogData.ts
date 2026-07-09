@@ -141,7 +141,7 @@ export const catalogGroups: CatalogGroup[] = [
       { name: "Фонтан-скульптура «Капля» из полированной стали", subcategory: "Фонтан со скульптурой", image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/1072b344-80c9-4964-ae29-b1b3fc289022.jpg" },
       { name: "Фонтан-скульптура «Лента» с водопадом", subcategory: "Фонтан со скульптурой", image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/672da378-17f1-4ffa-9ee6-0fa98c2af5cc.jpg" },
       { name: "Каменный фонтан со скульптурным шаром", subcategory: "Фонтан со скульптурой", image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/0efa1f98-90dd-4e00-a7fc-83897ebf6dd6.jpg" },
-      { name: "Фонтан-скульптура «Спираль» из нержавеющей стали", subcategory: "Фонтан со скульптурой", image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/e9ffb4da-c5e7-4395-9b5d-294def0d9798.jpg" },
+      { name: "Фонтан-скульптура «Спираль» из бетона", subcategory: "Фонтан со скульптурой", image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/e9ffb4da-c5e7-4395-9b5d-294def0d9798.jpg" },
     ],
   },
 ]
