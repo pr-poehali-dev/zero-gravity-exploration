@@ -41,58 +41,61 @@ const projects = [
     year: "2023",
     image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/files/095f6f53-aede-44a4-85c1-11b894b214b7.jpg",
   },
+]
+
+const riverParkProjects = [
   {
     id: 5,
-    title: "ЖК River Park — эксплуатируемая кровля",
-    category: "Жилой комплекс",
+    title: "Эксплуатируемая кровля",
+    category: "Озеленение кровли",
     location: "Москва-Сити",
     year: "2024",
     image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/dec23ceb-fbd5-4759-a2a9-863034047d3a.png",
   },
   {
     id: 6,
-    title: "ЖК River Park — монтаж навеса на террасе",
-    category: "Жилой комплекс",
+    title: "Монтаж навеса на террасе",
+    category: "Малые архитектурные формы",
     location: "Москва-Сити",
     year: "2024",
     image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/9ccf7db6-7bdb-43fb-830e-eaf52643a65f.png",
   },
   {
     id: 7,
-    title: "ЖК River Park — панорамный навес-пергола",
-    category: "Жилой комплекс",
+    title: "Панорамный навес-пергола",
+    category: "Малые архитектурные формы",
     location: "Москва-Сити",
     year: "2024",
     image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/c1880911-b13c-46f4-b95a-1fd6f670d453.png",
   },
   {
     id: 8,
-    title: "ЖК River Park — беседка-купол на кровле",
-    category: "Жилой комплекс",
+    title: "Беседка-купол на кровле",
+    category: "Малые архитектурные формы",
     location: "Москва-Сити",
     year: "2024",
     image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/98c14dcc-e0be-4a76-9e35-de8dc151e1a0.png",
   },
   {
     id: 9,
-    title: "ЖК River Park — беседка-купол в озеленении",
-    category: "Жилой комплекс",
+    title: "Беседка-купол в озеленении",
+    category: "Малые архитектурные формы",
     location: "Москва-Сити",
     year: "2024",
     image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/762679aa-1f86-47df-b118-f400cbd075eb.png",
   },
   {
     id: 10,
-    title: "ЖК River Park — монтаж каркаса навеса",
-    category: "Жилой комплекс",
+    title: "Монтаж каркаса навеса",
+    category: "Малые архитектурные формы",
     location: "Москва-Сити",
     year: "2024",
     image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/5dbed3c4-9442-4579-91a6-9438c8cba558.png",
   },
   {
     id: 11,
-    title: "ЖК River Park — беседка-купол на фоне города",
-    category: "Жилой комплекс",
+    title: "Беседка-купол на фоне города",
+    category: "Малые архитектурные формы",
     location: "Москва-Сити",
     year: "2024",
     image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/35428593-9d40-4755-a696-d9e85bf75991.png",
@@ -102,17 +105,15 @@ const projects = [
 export function Projects() {
   const [hoveredId, setHoveredId] = useState<number | null>(null)
   const [revealedImages, setRevealedImages] = useState<Set<number>>(new Set())
-  const imageRefs = useRef<(HTMLDivElement | null)[]>([])
+  const imageRefs = useRef<Map<number, HTMLDivElement | null>>(new Map())
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const index = imageRefs.current.indexOf(entry.target as HTMLDivElement)
-            if (index !== -1) {
-              setRevealedImages((prev) => new Set(prev).add(projects[index].id))
-            }
+            const id = Number((entry.target as HTMLDivElement).dataset.id)
+            setRevealedImages((prev) => new Set(prev).add(id))
           }
         })
       },
@@ -145,14 +146,18 @@ export function Projects() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-6 md:gap-8">
-          {projects.map((project, index) => (
+          {projects.map((project) => (
             <article
               key={project.id}
               className="group cursor-pointer"
               onMouseEnter={() => setHoveredId(project.id)}
               onMouseLeave={() => setHoveredId(null)}
             >
-              <div ref={(el) => (imageRefs.current[index] = el)} className="relative overflow-hidden aspect-[4/3] mb-6">
+              <div
+                ref={(el) => imageRefs.current.set(project.id, el)}
+                data-id={project.id}
+                className="relative overflow-hidden aspect-[4/3] mb-6"
+              >
                 <img
                   src={project.image || "/placeholder.svg"}
                   alt={project.title}
@@ -180,6 +185,53 @@ export function Projects() {
               </div>
             </article>
           ))}
+        </div>
+
+        <div className="mt-24">
+          <div className="mb-16">
+            <p className="text-muted-foreground text-sm tracking-[0.3em] uppercase mb-6">Жилой комплекс · Москва-Сити</p>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight">River Park</h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            {riverParkProjects.map((project) => (
+              <article
+                key={project.id}
+                className="group cursor-pointer"
+                onMouseEnter={() => setHoveredId(project.id)}
+                onMouseLeave={() => setHoveredId(null)}
+              >
+                <div
+                  ref={(el) => imageRefs.current.set(project.id, el)}
+                  data-id={project.id}
+                  className="relative overflow-hidden aspect-[4/3] mb-6"
+                >
+                  <img
+                    src={project.image || "/placeholder.svg"}
+                    alt={project.title}
+                    className={`w-full h-full object-cover transition-transform duration-700 ${
+                      hoveredId === project.id ? "scale-105" : "scale-100"
+                    }`}
+                  />
+                  <div
+                    className="absolute inset-0 bg-primary origin-top"
+                    style={{
+                      transform: revealedImages.has(project.id) ? "scaleY(0)" : "scaleY(1)",
+                      transition: "transform 1.5s cubic-bezier(0.76, 0, 0.24, 1)",
+                    }}
+                  />
+                </div>
+
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <h3 className="text-xl font-medium mb-2 group-hover:underline underline-offset-4">{project.title}</h3>
+                    <p className="text-muted-foreground text-sm">{project.category}</p>
+                  </div>
+                  <span className="text-muted-foreground/60 text-sm">{project.year}</span>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </div>
     </section>
