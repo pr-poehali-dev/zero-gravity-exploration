@@ -77,14 +77,6 @@ const riverParkProjects = [
     image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/98c14dcc-e0be-4a76-9e35-de8dc151e1a0.png",
   },
   {
-    id: 9,
-    title: "Беседка-купол в озеленении",
-    category: "Малые архитектурные формы",
-    location: "Москва-Сити",
-    year: "2024",
-    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/762679aa-1f86-47df-b118-f400cbd075eb.png",
-  },
-  {
     id: 10,
     title: "Монтаж каркаса навеса",
     category: "Малые архитектурные формы",
