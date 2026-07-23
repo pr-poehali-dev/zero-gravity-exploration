@@ -41,6 +41,38 @@ const projects = [
     year: "2023",
     image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/files/095f6f53-aede-44a4-85c1-11b894b214b7.jpg",
   },
+  {
+    id: 5,
+    title: "Эксплуатируемая кровля бизнес-центра",
+    category: "Общественная зона",
+    location: "Москва-Сити",
+    year: "2024",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/dec23ceb-fbd5-4759-a2a9-863034047d3a.png",
+  },
+  {
+    id: 6,
+    title: "Монтаж навеса на террасе",
+    category: "Общественная зона",
+    location: "Москва-Сити",
+    year: "2024",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/9ccf7db6-7bdb-43fb-830e-eaf52643a65f.png",
+  },
+  {
+    id: 7,
+    title: "Панорамный навес-пергола",
+    category: "Общественная зона",
+    location: "Москва-Сити",
+    year: "2024",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/c1880911-b13c-46f4-b95a-1fd6f670d453.png",
+  },
+  {
+    id: 8,
+    title: "Беседка-купол на кровле",
+    category: "Общественная зона",
+    location: "Москва-Сити",
+    year: "2024",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/98c14dcc-e0be-4a76-9e35-de8dc151e1a0.png",
+  },
 ]
 
 export function Projects() {
