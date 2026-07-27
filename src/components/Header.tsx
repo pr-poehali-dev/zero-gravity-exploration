@@ -3,6 +3,7 @@ import { useNavigate, useLocation, Link } from "react-router-dom"
 import { ChevronDown } from "lucide-react"
 import { cn } from "../lib/utils"
 import { catalogGroups } from "../data/catalogData"
+import { projects } from "../data/projectsData"
 
 const navItems = [
   { label: "Главная", id: "hero" },
@@ -17,8 +18,23 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [catalogOpen, setCatalogOpen] = useState(false)
   const [mobileCatalogOpen, setMobileCatalogOpen] = useState(false)
+  const [projectsOpen, setProjectsOpen] = useState(false)
+  const [mobileProjectsOpen, setMobileProjectsOpen] = useState(false)
   const navigate = useNavigate()
   const location = useLocation()
+
+  const goToProject = (e: MouseEvent<HTMLAnchorElement>, projectId: number) => {
+    e.preventDefault()
+    closeMobileMenu()
+    const targetId = `project-${projectId}`
+
+    if (location.pathname === "/") {
+      const el = document.getElementById(targetId)
+      el?.scrollIntoView({ behavior: "smooth", block: "start" })
+    } else {
+      navigate(`/#${targetId}`)
+    }
+  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -110,6 +126,46 @@ export function Header() {
                   </ul>
                 </div>
               </li>
+            ) : item.id === "projects" ? (
+              <li
+                key={item.label}
+                className="relative"
+                onMouseEnter={() => setProjectsOpen(true)}
+                onMouseLeave={() => setProjectsOpen(false)}
+              >
+                <a
+                  href={`/#${item.id}`}
+                  onClick={(e) => goToSection(e, item.id)}
+                  className="flex items-center gap-1 hover:text-[rgb(251,146,60)] transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 hover:after:w-full after:bg-[rgb(251,146,60)] after:transition-all after:duration-300 text-white"
+                >
+                  {item.label}
+                  <ChevronDown
+                    className={cn("w-3.5 h-3.5 transition-transform duration-300", projectsOpen && "rotate-180")}
+                    strokeWidth={1.5}
+                  />
+                </a>
+
+                <div
+                  className={cn(
+                    "absolute top-full left-1/2 -translate-x-1/2 pt-4 transition-all duration-300",
+                    projectsOpen ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 translate-y-2 pointer-events-none",
+                  )}
+                >
+                  <ul className="bg-primary rounded-xl shadow-xl overflow-hidden min-w-[240px] py-2">
+                    {projects.map((project) => (
+                      <li key={project.id}>
+                        <a
+                          href={`/#project-${project.id}`}
+                          onClick={(e) => goToProject(e, project.id)}
+                          className="block px-5 py-3 text-white hover:text-[rgb(251,146,60)] hover:bg-white/5 transition-colors duration-200 whitespace-nowrap"
+                        >
+                          {project.title}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </li>
             ) : (
               <li key={item.label}>
                 <a
@@ -195,6 +251,47 @@ export function Header() {
                         >
                           {group.title}
                         </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </li>
+              ) : item.id === "projects" ? (
+                <li key={item.label}>
+                  <div className="flex items-center justify-between">
+                    <a
+                      href={`/#${item.id}`}
+                      className="hover:text-[rgb(251,146,60)] transition-colors duration-300 text-white text-4xl font-light block"
+                      onClick={(e) => goToSection(e, item.id)}
+                    >
+                      {item.label}
+                    </a>
+                    <button
+                      aria-label="Показать список проектов"
+                      onClick={() => setMobileProjectsOpen(!mobileProjectsOpen)}
+                      className="text-white p-2"
+                    >
+                      <ChevronDown
+                        className={cn("w-6 h-6 transition-transform duration-300", mobileProjectsOpen && "rotate-180")}
+                        strokeWidth={1.5}
+                      />
+                    </button>
+                  </div>
+
+                  <ul
+                    className={cn(
+                      "overflow-hidden transition-all duration-300 ease-in-out flex flex-col gap-4 pl-4",
+                      mobileProjectsOpen ? "max-h-96 opacity-100 mt-4" : "max-h-0 opacity-0",
+                    )}
+                  >
+                    {projects.map((project) => (
+                      <li key={project.id}>
+                        <a
+                          href={`/#project-${project.id}`}
+                          onClick={(e) => goToProject(e, project.id)}
+                          className="text-white/80 hover:text-[rgb(251,146,60)] transition-colors duration-300 text-xl font-light block"
+                        >
+                          {project.title}
+                        </a>
                       </li>
                     ))}
                   </ul>
