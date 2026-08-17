@@ -50,6 +50,26 @@ const riverParkGallery: ProjectGalleryItem[] = [
     title: "Скамьи и защитные экраны",
     image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/83d96b84-275e-4127-88a8-77a088ca984e.png",
   },
+  {
+    title: "Навес-пергола на кровле",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/f0ee079c-974c-42c4-a30e-5223a2534004.png",
+  },
+  {
+    title: "Кашпо-шары из бетона",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/629500c3-de42-49b9-8b28-c9c7c574c297.png",
+  },
+  {
+    title: "Кашпо для озеленения двора",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/ab5d36b9-46ae-46ab-9484-f29675023c78.png",
+  },
+  {
+    title: "Монтаж навеса-перголы",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/71cd167f-7308-4412-be21-d86cf70af673.png",
+  },
+  {
+    title: "Скамья с деревянным сиденьем",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/6944b97a-ea71-4094-8105-338f955655c9.png",
+  },
 ]
 
 export const projects: Project[] = [
@@ -75,7 +95,7 @@ export const projects: Project[] = [
     category: "Жилой комплекс",
     location: "Москва-Сити",
     year: "2024",
-    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/c1880911-b13c-46f4-b95a-1fd6f670d453.png",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/f0ee079c-974c-42c4-a30e-5223a2534004.png",
     gallery: riverParkGallery,
   },
   {
