@@ -92,6 +92,29 @@ const riverParkGallery: ProjectGalleryItem[] = [
   },
 ]
 
+const riverParkKolomenskyGallery: ProjectGalleryItem[] = [
+  {
+    title: "Шезлонги на деревянном настиле",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/0c3170a1-c32a-4587-af8c-4b2f297de590.png",
+  },
+  {
+    title: "Деревянные лежаки у набережной",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/536986f3-27cf-4909-b57c-0bc11ea2ccca.png",
+  },
+  {
+    title: "Декоративные бетонные шары",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/8143ef1e-4374-40fa-afcb-d92e79a8f2dc.png",
+  },
+  {
+    title: "Изогнутая скамья с урной",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/ac1a465c-8c16-42f1-8126-401a6a2a5204.png",
+  },
+  {
+    title: "Скамья на бетонных опорах",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/9afba531-9e91-4b58-91bf-8e6aaca50113.png",
+  },
+]
+
 export const projects: Project[] = [
   {
     id: 1,
@@ -120,10 +143,11 @@ export const projects: Project[] = [
   },
   {
     id: 4,
-    title: "Общественное пространство «Сити»",
+    title: "River Park Коломенский",
     category: "Общественная зона",
     location: "Москва",
     year: "2023",
-    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/files/095f6f53-aede-44a4-85c1-11b894b214b7.jpg",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/0c3170a1-c32a-4587-af8c-4b2f297de590.png",
+    gallery: riverParkKolomenskyGallery,
   },
 ]
