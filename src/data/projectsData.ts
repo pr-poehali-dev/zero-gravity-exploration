@@ -70,6 +70,26 @@ const riverParkGallery: ProjectGalleryItem[] = [
     title: "Скамья с деревянным сиденьем",
     image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/6944b97a-ea71-4094-8105-338f955655c9.png",
   },
+  {
+    title: "Скамья на фоне двора",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/488b886c-c807-459e-b1ab-9c2d1dc661e8.png",
+  },
+  {
+    title: "Скамьи и кашпо перед монтажом",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/41b363da-21b5-4d48-b4f8-d9001c88d8ae.png",
+  },
+  {
+    title: "Монтаж скамьи под навесом",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/4731f939-06e5-4341-9661-c81b9d4d17c3.png",
+  },
+  {
+    title: "Установка панорамного навеса",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/1ee03954-02a7-47f2-ad40-ed234688c155.png",
+  },
+  {
+    title: "Желтые арт-объекты со скамьями",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/a8f65fa5-88f3-452d-bc2c-8de70cc0512c.png",
+  },
 ]
 
 export const projects: Project[] = [
