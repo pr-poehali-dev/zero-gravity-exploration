@@ -5,7 +5,7 @@ import { Header } from "../components/Header"
 import { Footer } from "../components/Footer"
 import { ScrollToTop } from "../components/ScrollToTop"
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog"
-import { projects } from "../data/projectsData"
+import { projects, groupGalleryItems } from "../data/projectsData"
 
 export default function AllProjects() {
   const [galleryProjectId, setGalleryProjectId] = useState<number | null>(null)
@@ -68,13 +68,21 @@ export default function AllProjects() {
       <Dialog open={!!galleryProjectId} onOpenChange={(open) => !open && setGalleryProjectId(null)}>
         <DialogContent className="max-w-4xl max-h-[85vh] overflow-y-auto">
           <DialogTitle className="text-2xl font-medium">{activeProject?.title}</DialogTitle>
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 mt-2">
-            {activeProject?.gallery?.map((item, i) => (
-              <div key={i} className="overflow-hidden aspect-[4/3]">
-                <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
-                <p className="text-sm text-muted-foreground mt-2">{item.title}</p>
-              </div>
-            ))}
+          <div className="space-y-10 mt-2">
+            {activeProject?.gallery &&
+              groupGalleryItems(activeProject.gallery).map((group) => (
+                <div key={group.name}>
+                  <h3 className="text-lg font-medium mb-4">{group.name}</h3>
+                  <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+                    {group.items.map((item, i) => (
+                      <div key={i} className="overflow-hidden aspect-[4/3]">
+                        <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
+                        <p className="text-sm text-muted-foreground mt-2">{item.title}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
           </div>
         </DialogContent>
       </Dialog>

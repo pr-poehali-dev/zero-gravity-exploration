@@ -1,6 +1,7 @@
 export interface ProjectGalleryItem {
   title: string
   image: string
+  group?: string
 }
 
 export interface Project {
@@ -96,144 +97,218 @@ const riverParkKolomenskyGallery: ProjectGalleryItem[] = [
   {
     title: "Шезлонги на деревянном настиле в тени деревьев",
     image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/0c3170a1-c32a-4587-af8c-4b2f297de590.png",
+    group: "Зона отдыха у воды",
   },
   {
     title: "Деревянные лежаки на набережной у велодорожки",
     image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/536986f3-27cf-4909-b57c-0bc11ea2ccca.png",
-  },
-  {
-    title: "Декоративные бетонные шары в озеленении у стеклянного ограждения",
-    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/8143ef1e-4374-40fa-afcb-d92e79a8f2dc.png",
-  },
-  {
-    title: "Изогнутая деревянная скамья с урной у парковки",
-    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/ac1a465c-8c16-42f1-8126-401a6a2a5204.png",
-  },
-  {
-    title: "Скамья на бетонных опорах у кирпичного фасада с урной",
-    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/9afba531-9e91-4b58-91bf-8e6aaca50113.png",
-  },
-  {
-    title: "Спортивная площадка с разноцветным покрытием во дворе жилого комплекса",
-    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/e8e0fb8d-b559-4a7a-b9f2-dbb3f3d064f7.png",
-  },
-  {
-    title: "Деревянная скамья под навесом вдоль ограждения спортплощадки",
-    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/1371c167-c2ce-4d44-a5cf-6dbc1d8f8d08.png",
-  },
-  {
-    title: "Панорамный навес со скамьёй вдоль всей спортивной площадки",
-    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/8624b43e-ded0-49a4-88b1-1bab93e28792.png",
-  },
-  {
-    title: "Изогнутая скамья у входа на спортивную площадку",
-    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/a884d213-77ed-4ddc-8ab6-b23997341cd8.png",
-  },
-  {
-    title: "Металлическое ограждение спортплощадки с видом на жилой квартал",
-    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/b6dbda4e-96eb-4c47-b4d7-bf95980e18ca.png",
-  },
-  {
-    title: "Изогнутая волнообразная скамья из массива дерева на металлических опорах",
-    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/fc7aa8c9-ccbc-4731-b1c6-256679a41c05.png",
-  },
-  {
-    title: "Круглый деревянный подиум на мощёной площадке рядом со спортзоной",
-    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/1d44dbfc-331a-4cf8-a987-7b62b16456c1.png",
-  },
-  {
-    title: "Скамья с подлокотниками у цветника перед фасадом здания",
-    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/7b3373b4-4794-4154-91ff-085729dca714.png",
-  },
-  {
-    title: "Кресла с подлокотниками на прогулочной дорожке у газона",
-    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/b520e090-abfd-4afd-befe-8b72428b9c01.png",
-  },
-  {
-    title: "Теннисные столы и скамья с урной на мощёной площадке двора",
-    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/b2c21049-1372-4b8c-9339-08a274aabe3a.png",
-  },
-  {
-    title: "Декоративные светящиеся шары на насыпи из гальки в зоне отдыха",
-    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/21d0774d-443e-4266-91c4-3b68891c1b5a.png",
-  },
-  {
-    title: "Панорамный навес-пергола со скамьями на насыпи из гальки",
-    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/2e2df0f0-492a-492f-850f-d15bdf282966.png",
-  },
-  {
-    title: "Дизайнерская скамья с красным металлическим каркасом в форме молнии",
-    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/66daeb0f-ec05-404b-9ad4-ca3e1d1f4330.png",
-  },
-  {
-    title: "Длинная изогнутая деревянная скамья вдоль мощёной площадки",
-    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/f1eb0808-d97d-4dc8-b06d-6100d63baed8.png",
-  },
-  {
-    title: "Скамья с подлокотниками у фасада здания на мощении",
-    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/de7f9ebd-2e7c-4be5-b946-0199d0d8cf2e.png",
-  },
-  {
-    title: "Круглые деревянные навесы с бетонными табуретами в зоне отдыха",
-    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/2d245e65-1809-402c-b947-009d77111c3d.png",
-  },
-  {
-    title: "Бетонные табуреты с деревянным сиденьем вдоль дорожки под навесом",
-    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/dd60fb29-b16b-426c-91ea-de30775e115c.png",
-  },
-  {
-    title: "Круглые бетонные ступени-плиты в дорожке среди декоративных трав",
-    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/7f463768-cf3a-48aa-8edd-9c0108f73c0d.png",
-  },
-  {
-    title: "Круглый навес с бетонными табуретами на мощёной площадке двора",
-    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/54d50b48-ba37-4eea-80b7-e691f05a8104.png",
-  },
-  {
-    title: "Круговая деревянная скамья вокруг приствольной зоны у набережной",
-    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/12eab265-50a4-49f1-b749-9434e7692a5a.png",
+    group: "Зона отдыха у воды",
   },
   {
     title: "Изогнутые деревянные скамьи на смотровой площадке у воды",
     image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/c9cc9d84-216c-417f-bd21-1a679b97b481.png",
+    group: "Зона отдыха у воды",
+  },
+  {
+    title: "Декоративные бетонные шары в озеленении у стеклянного ограждения",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/8143ef1e-4374-40fa-afcb-d92e79a8f2dc.png",
+    group: "Озеленение и малые формы",
+  },
+  {
+    title: "Декоративные светящиеся шары на насыпи из гальки в зоне отдыха",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/21d0774d-443e-4266-91c4-3b68891c1b5a.png",
+    group: "Озеленение и малые формы",
+  },
+  {
+    title: "Круглые бетонные ступени-плиты в дорожке среди декоративных трав",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/7f463768-cf3a-48aa-8edd-9c0108f73c0d.png",
+    group: "Озеленение и малые формы",
+  },
+  {
+    title: "Круглые бетонные кашпо-кольца с молодыми деревьями на газоне",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/a6d09fa3-00b5-49b6-9fa8-8f83e1e0e24f.png",
+    group: "Озеленение и малые формы",
+  },
+  {
+    title: "Круглое бетонное кашпо с мульчированием вокруг молодого дерева",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/e3c3566b-beef-4ed9-8185-e01a99f8a021.png",
+    group: "Озеленение и малые формы",
+  },
+  {
+    title: "Двойное бетонное кашпо-кольцо разного диаметра с деревом и кустарником",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/231375db-5505-47e5-854f-e1cccdd48927.png",
+    group: "Озеленение и малые формы",
+  },
+  {
+    title: "Бетонное кашпо-кольцо крупным планом с высаженным деревом",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/eb9f48e0-bde6-42c7-8816-0fc9fa6fe038.png",
+    group: "Озеленение и малые формы",
+  },
+  {
+    title: "Двойное кашпо-кольцо с деревьями на мощёной площадке рядом со скамьями",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/c78b5673-bd71-47e7-b813-8b72c8991ce0.png",
+    group: "Озеленение и малые формы",
+  },
+  {
+    title: "Изогнутая деревянная скамья с урной у парковки",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/ac1a465c-8c16-42f1-8126-401a6a2a5204.png",
+    group: "Скамьи и парковая мебель",
+  },
+  {
+    title: "Скамья на бетонных опорах у кирпичного фасада с урной",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/9afba531-9e91-4b58-91bf-8e6aaca50113.png",
+    group: "Скамьи и парковая мебель",
+  },
+  {
+    title: "Изогнутая волнообразная скамья из массива дерева на металлических опорах",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/fc7aa8c9-ccbc-4731-b1c6-256679a41c05.png",
+    group: "Скамьи и парковая мебель",
+  },
+  {
+    title: "Скамья с подлокотниками у цветника перед фасадом здания",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/7b3373b4-4794-4154-91ff-085729dca714.png",
+    group: "Скамьи и парковая мебель",
+  },
+  {
+    title: "Кресла с подлокотниками на прогулочной дорожке у газона",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/b520e090-abfd-4afd-befe-8b72428b9c01.png",
+    group: "Скамьи и парковая мебель",
+  },
+  {
+    title: "Дизайнерская скамья с красным металлическим каркасом в форме молнии",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/66daeb0f-ec05-404b-9ad4-ca3e1d1f4330.png",
+    group: "Скамьи и парковая мебель",
+  },
+  {
+    title: "Длинная изогнутая деревянная скамья вдоль мощёной площадки",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/f1eb0808-d97d-4dc8-b06d-6100d63baed8.png",
+    group: "Скамьи и парковая мебель",
+  },
+  {
+    title: "Скамья с подлокотниками у фасада здания на мощении",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/de7f9ebd-2e7c-4be5-b946-0199d0d8cf2e.png",
+    group: "Скамьи и парковая мебель",
+  },
+  {
+    title: "Круговая деревянная скамья вокруг приствольной зоны у набережной",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/12eab265-50a4-49f1-b749-9434e7692a5a.png",
+    group: "Скамьи и парковая мебель",
   },
   {
     title: "Круговая деревянная скамья вокруг дерева на мощёной площадке двора",
     image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/953966a0-77f1-432e-ba05-0b80ef4d4305.png",
+    group: "Скамьи и парковая мебель",
   },
   {
-    title: "Изогнутая деревянная скамья с высокой спинкой вид сверху",
+    title: "Изогнутая деревянная скамья с высокой спинкой, вид сверху",
     image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/f36173af-bd7f-486f-8970-9a110454a536.png",
+    group: "Скамьи и парковая мебель",
   },
   {
     title: "S-образная деревянная скамья на мощении рядом с газоном",
     image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/004d7432-f08a-4be2-ae39-b8563021f176.png",
-  },
-  {
-    title: "Зона отдыха с деревянными скамьями и цветником на синем резиновом покрытии",
-    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/cbd7538e-40fe-4271-b691-d3ab4f74f3a6.png",
-  },
-  {
-    title: "Скамья с урной на синем резиновом покрытии детской площадки",
-    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/e89b9f14-791b-4ad6-9afd-e9cdaf6fe8c5.png",
-  },
-  {
-    title: "Урна с деревянными рейками на синем резиновом покрытии",
-    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/989c710f-7388-47c4-b2f9-9ac9595b6a9d.png",
-  },
-  {
-    title: "Навес-пергола со столом и скамьями на насыпи из гальки",
-    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/5c7d791f-9bd4-4471-8a3e-a7cb90e2a594.png",
-  },
-  {
-    title: "Урна и скамья на синем резиновом покрытии рядом с насыпью гальки",
-    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/bb7319f8-fd04-4e97-bfa3-392aad98e6b0.png",
+    group: "Скамьи и парковая мебель",
   },
   {
     title: "Изогнутая деревянная скамья вдоль мощёной дорожки у газона",
     image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/6b3645df-3196-42da-aeb8-d131400e62fb.png",
+    group: "Скамьи и парковая мебель",
+  },
+  {
+    title: "Спортивная площадка с разноцветным покрытием во дворе жилого комплекса",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/e8e0fb8d-b559-4a7a-b9f2-dbb3f3d064f7.png",
+    group: "Спортивная площадка",
+  },
+  {
+    title: "Деревянная скамья под навесом вдоль ограждения спортплощадки",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/1371c167-c2ce-4d44-a5cf-6dbc1d8f8d08.png",
+    group: "Спортивная площадка",
+  },
+  {
+    title: "Панорамный навес со скамьёй вдоль всей спортивной площадки",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/8624b43e-ded0-49a4-88b1-1bab93e28792.png",
+    group: "Спортивная площадка",
+  },
+  {
+    title: "Изогнутая скамья у входа на спортивную площадку",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/a884d213-77ed-4ddc-8ab6-b23997341cd8.png",
+    group: "Спортивная площадка",
+  },
+  {
+    title: "Металлическое ограждение спортплощадки с видом на жилой квартал",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/b6dbda4e-96eb-4c47-b4d7-bf95980e18ca.png",
+    group: "Спортивная площадка",
+  },
+  {
+    title: "Круглый деревянный подиум на мощёной площадке рядом со спортзоной",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/1d44dbfc-331a-4cf8-a987-7b62b16456c1.png",
+    group: "Спортивная площадка",
+  },
+  {
+    title: "Теннисные столы и скамья с урной на мощёной площадке двора",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/b2c21049-1372-4b8c-9339-08a274aabe3a.png",
+    group: "Спортивная площадка",
+  },
+  {
+    title: "Панорамный навес-пергола со скамьями на насыпи из гальки",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/2e2df0f0-492a-492f-850f-d15bdf282966.png",
+    group: "Навесы и перголы",
+  },
+  {
+    title: "Круглые деревянные навесы с бетонными табуретами в зоне отдыха",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/2d245e65-1809-402c-b947-009d77111c3d.png",
+    group: "Навесы и перголы",
+  },
+  {
+    title: "Бетонные табуреты с деревянным сиденьем вдоль дорожки под навесом",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/dd60fb29-b16b-426c-91ea-de30775e115c.png",
+    group: "Навесы и перголы",
+  },
+  {
+    title: "Круглый навес с бетонными табуретами на мощёной площадке двора",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/54d50b48-ba37-4eea-80b7-e691f05a8104.png",
+    group: "Навесы и перголы",
+  },
+  {
+    title: "Навес-пергола со столом и скамьями на насыпи из гальки",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/5c7d791f-9bd4-4471-8a3e-a7cb90e2a594.png",
+    group: "Навесы и перголы",
+  },
+  {
+    title: "Зона отдыха с деревянными скамьями и цветником на синем резиновом покрытии",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/cbd7538e-40fe-4271-b691-d3ab4f74f3a6.png",
+    group: "Детская площадка",
+  },
+  {
+    title: "Скамья с урной на синем резиновом покрытии детской площадки",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/e89b9f14-791b-4ad6-9afd-e9cdaf6fe8c5.png",
+    group: "Детская площадка",
+  },
+  {
+    title: "Урна с деревянными рейками на синем резиновом покрытии",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/989c710f-7388-47c4-b2f9-9ac9595b6a9d.png",
+    group: "Детская площадка",
+  },
+  {
+    title: "Урна и скамья на синем резиновом покрытии рядом с насыпью гальки",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/bb7319f8-fd04-4e97-bfa3-392aad98e6b0.png",
+    group: "Детская площадка",
   },
 ]
+
+export function groupGalleryItems(gallery: ProjectGalleryItem[]) {
+  const groups: { name: string; items: ProjectGalleryItem[] }[] = []
+  gallery.forEach((item) => {
+    const name = item.group || "Фотографии"
+    let group = groups.find((g) => g.name === name)
+    if (!group) {
+      group = { name, items: [] }
+      groups.push(group)
+    }
+    group.items.push(item)
+  })
+  return groups
+}
 
 export const projects: Project[] = [
   {
