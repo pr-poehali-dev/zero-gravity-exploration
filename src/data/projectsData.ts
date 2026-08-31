@@ -213,6 +213,26 @@ const riverParkKolomenskyGallery: ProjectGalleryItem[] = [
     title: "Зона отдыха с деревянными скамьями и цветником на синем резиновом покрытии",
     image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/cbd7538e-40fe-4271-b691-d3ab4f74f3a6.png",
   },
+  {
+    title: "Скамья с урной на синем резиновом покрытии детской площадки",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/e89b9f14-791b-4ad6-9afd-e9cdaf6fe8c5.png",
+  },
+  {
+    title: "Урна с деревянными рейками на синем резиновом покрытии",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/989c710f-7388-47c4-b2f9-9ac9595b6a9d.png",
+  },
+  {
+    title: "Навес-пергола со столом и скамьями на насыпи из гальки",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/5c7d791f-9bd4-4471-8a3e-a7cb90e2a594.png",
+  },
+  {
+    title: "Урна и скамья на синем резиновом покрытии рядом с насыпью гальки",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/bb7319f8-fd04-4e97-bfa3-392aad98e6b0.png",
+  },
+  {
+    title: "Изогнутая деревянная скамья вдоль мощёной дорожки у газона",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/6b3645df-3196-42da-aeb8-d131400e62fb.png",
+  },
 ]
 
 export const projects: Project[] = [
