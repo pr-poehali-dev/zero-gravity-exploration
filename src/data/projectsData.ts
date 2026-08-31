@@ -173,6 +173,26 @@ const riverParkKolomenskyGallery: ProjectGalleryItem[] = [
     title: "Скамья с подлокотниками у фасада здания на мощении",
     image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/de7f9ebd-2e7c-4be5-b946-0199d0d8cf2e.png",
   },
+  {
+    title: "Круглые деревянные навесы с бетонными табуретами в зоне отдыха",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/2d245e65-1809-402c-b947-009d77111c3d.png",
+  },
+  {
+    title: "Бетонные табуреты с деревянным сиденьем вдоль дорожки под навесом",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/dd60fb29-b16b-426c-91ea-de30775e115c.png",
+  },
+  {
+    title: "Круглые бетонные ступени-плиты в дорожке среди декоративных трав",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/7f463768-cf3a-48aa-8edd-9c0108f73c0d.png",
+  },
+  {
+    title: "Круглый навес с бетонными табуретами на мощёной площадке двора",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/54d50b48-ba37-4eea-80b7-e691f05a8104.png",
+  },
+  {
+    title: "Круговая деревянная скамья вокруг приствольной зоны у набережной",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/12eab265-50a4-49f1-b749-9434e7692a5a.png",
+  },
 ]
 
 export const projects: Project[] = [
