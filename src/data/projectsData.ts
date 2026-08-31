@@ -133,6 +133,26 @@ const riverParkKolomenskyGallery: ProjectGalleryItem[] = [
     title: "Металлическое ограждение спортплощадки с видом на жилой квартал",
     image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/b6dbda4e-96eb-4c47-b4d7-bf95980e18ca.png",
   },
+  {
+    title: "Изогнутая волнообразная скамья из массива дерева на металлических опорах",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/fc7aa8c9-ccbc-4731-b1c6-256679a41c05.png",
+  },
+  {
+    title: "Круглый деревянный подиум на мощёной площадке рядом со спортзоной",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/1d44dbfc-331a-4cf8-a987-7b62b16456c1.png",
+  },
+  {
+    title: "Скамья с подлокотниками у цветника перед фасадом здания",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/7b3373b4-4794-4154-91ff-085729dca714.png",
+  },
+  {
+    title: "Кресла с подлокотниками на прогулочной дорожке у газона",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/b520e090-abfd-4afd-befe-8b72428b9c01.png",
+  },
+  {
+    title: "Теннисные столы и скамья с урной на мощёной площадке двора",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/b2c21049-1372-4b8c-9339-08a274aabe3a.png",
+  },
 ]
 
 export const projects: Project[] = [
