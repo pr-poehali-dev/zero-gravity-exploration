@@ -193,6 +193,26 @@ const riverParkKolomenskyGallery: ProjectGalleryItem[] = [
     title: "Круговая деревянная скамья вокруг приствольной зоны у набережной",
     image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/12eab265-50a4-49f1-b749-9434e7692a5a.png",
   },
+  {
+    title: "Изогнутые деревянные скамьи на смотровой площадке у воды",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/c9cc9d84-216c-417f-bd21-1a679b97b481.png",
+  },
+  {
+    title: "Круговая деревянная скамья вокруг дерева на мощёной площадке двора",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/953966a0-77f1-432e-ba05-0b80ef4d4305.png",
+  },
+  {
+    title: "Изогнутая деревянная скамья с высокой спинкой вид сверху",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/f36173af-bd7f-486f-8970-9a110454a536.png",
+  },
+  {
+    title: "S-образная деревянная скамья на мощении рядом с газоном",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/004d7432-f08a-4be2-ae39-b8563021f176.png",
+  },
+  {
+    title: "Зона отдыха с деревянными скамьями и цветником на синем резиновом покрытии",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/cbd7538e-40fe-4271-b691-d3ab4f74f3a6.png",
+  },
 ]
 
 export const projects: Project[] = [
