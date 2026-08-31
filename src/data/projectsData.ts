@@ -110,6 +110,31 @@ const riverParkKolomenskyGallery: ProjectGalleryItem[] = [
     group: "Зона отдыха у воды",
   },
   {
+    title: "Скамьи с наклонной спинкой на набережной у реки",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/c3f735c4-521a-4d78-bc87-09e0a1bba408.png",
+    group: "Зона отдыха у воды",
+  },
+  {
+    title: "Деревянная скамья с металлическим каркасом на плитке набережной",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/7054c478-16a6-4d3d-8c88-8f154711fd4d.png",
+    group: "Зона отдыха у воды",
+  },
+  {
+    title: "Круговая скамья вокруг деревьев на набережной у реки",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/a0efbc03-362a-47ea-90a4-ada003a2db11.png",
+    group: "Зона отдыха у воды",
+  },
+  {
+    title: "Круговая скамья с приствольным озеленением на мощёной набережной",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/3c877a8d-b582-4329-b9bb-d616a8d8a5eb.png",
+    group: "Зона отдыха у воды",
+  },
+  {
+    title: "Синяя скамья с фигурными опорами на набережной у реки",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/7847a61c-dcc0-4e40-be0d-6b6069837fbb.png",
+    group: "Зона отдыха у воды",
+  },
+  {
     title: "Декоративные бетонные шары в озеленении у стеклянного ограждения",
     image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/8143ef1e-4374-40fa-afcb-d92e79a8f2dc.png",
     group: "Озеленение и малые формы",
