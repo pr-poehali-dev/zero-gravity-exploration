@@ -215,6 +215,31 @@ const riverParkKolomenskyGallery: ProjectGalleryItem[] = [
     group: "Скамьи и парковая мебель",
   },
   {
+    title: "Длинная изогнутая скамья на чёрных опорах вдоль дорожки у парковки",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/19e57607-0c69-416f-873e-b9774747df4e.png",
+    group: "Скамьи и парковая мебель",
+  },
+  {
+    title: "Изогнутая деревянная скамья вдоль дорожки рядом с бетонными кашпо",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/e590ba34-a026-4a84-8b65-543ef828dc78.png",
+    group: "Скамьи и парковая мебель",
+  },
+  {
+    title: "Прямые скамьи с урной вдоль настила извилистой дорожки",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/7ce2008b-1cb1-4f14-b39d-b8a6ff3f5c67.png",
+    group: "Скамьи и парковая мебель",
+  },
+  {
+    title: "Скамья с металлической спинкой на тёмном постаменте рядом с урной",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/b4525140-4a5a-496f-8089-4a365cb0ee1b.png",
+    group: "Скамьи и парковая мебель",
+  },
+  {
+    title: "Скамьи из тёмного дерева на металлическом постаменте вдоль ограждения",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/348e146f-b072-4b5f-8946-0905e7e32d23.png",
+    group: "Скамьи и парковая мебель",
+  },
+  {
     title: "Спортивная площадка с разноцветным покрытием во дворе жилого комплекса",
     image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/e8e0fb8d-b559-4a7a-b9f2-dbb3f3d064f7.png",
     group: "Спортивная площадка",
