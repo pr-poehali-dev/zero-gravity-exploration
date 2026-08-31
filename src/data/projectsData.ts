@@ -153,6 +153,26 @@ const riverParkKolomenskyGallery: ProjectGalleryItem[] = [
     title: "Теннисные столы и скамья с урной на мощёной площадке двора",
     image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/b2c21049-1372-4b8c-9339-08a274aabe3a.png",
   },
+  {
+    title: "Декоративные светящиеся шары на насыпи из гальки в зоне отдыха",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/21d0774d-443e-4266-91c4-3b68891c1b5a.png",
+  },
+  {
+    title: "Панорамный навес-пергола со скамьями на насыпи из гальки",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/2e2df0f0-492a-492f-850f-d15bdf282966.png",
+  },
+  {
+    title: "Дизайнерская скамья с красным металлическим каркасом в форме молнии",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/66daeb0f-ec05-404b-9ad4-ca3e1d1f4330.png",
+  },
+  {
+    title: "Длинная изогнутая деревянная скамья вдоль мощёной площадки",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/f1eb0808-d97d-4dc8-b06d-6100d63baed8.png",
+  },
+  {
+    title: "Скамья с подлокотниками у фасада здания на мощении",
+    image: "https://cdn.poehali.dev/projects/3a0b226a-fb58-4fd0-9a57-4e73054e7090/bucket/de7f9ebd-2e7c-4be5-b946-0199d0d8cf2e.png",
+  },
 ]
 
 export const projects: Project[] = [
